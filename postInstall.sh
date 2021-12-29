@@ -19,6 +19,7 @@ echo "Copy configs"
 cp ~/arch-install/i3/config ~/.config/i3/config
 cp ~/arch-install/polybar/config ~/.config/polybar/config
 cp ~/arch-install/polybar/launch.sh ~/.config/polybar/launch.sh
+sudo chmod +x ~/.config/polybar/launch.sh
 
 echo "Download wallpaper"
 curl https://clearvision.gitlab.io/images/sapphire.jpg --output ~/.config/wallpaper/wallpaper.jpg
