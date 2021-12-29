@@ -191,5 +191,5 @@ bindsym $mod+space exec --no-startup-id rofi -show drun
 # Start wallpaper
 exec --no-startup-id nitrogen --set-auto ~/.config/wallpaper/wallpaper.jpg --head=0 && nitrogen --set-auto ~/.config/wallpaper/wallpaper.jpg --head=1
 
-# Start docky
+# Start polybar
 exec --no-startup-id bash ~/.config/polybar/launch.sh --docky
