@@ -1,6 +1,16 @@
-device="/dev/sda"
-hostname="lorem-pc"
-username="lorem"
+device="default_device"
+hostname="default_hostname"
+username="default_username"
+
+read -p "Enter disc (ex. '/dev/sda'):" device
+read -p "Enter hostname (ex. 'example-pc'):" hostname
+read -p "Enter username (ex. 'exampleUser'):" username
+
+echo "disc"=${device}
+echo "hostname"=${hostname}
+echo "username"=${username}
+
+read -p "Continue? (Y/N): " confirm && [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]] || exit 1
 
 echo "Create partitions"
 parted ${device} mklabel gpt
