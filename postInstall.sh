@@ -1,6 +1,11 @@
 cd ~/.
 
-sudo pacman --noconfirm -Sy git
+sudo pacman --noconfirm -Sy git mpd alsa-utils
+
+sudo systemctl enable mpd.service
+sudo systemctl start mpd.service
+
+amixer sset Master unmute
 
 echo "Clone repo"
 git clone https://github.com/Lorem96/arch-install.git
@@ -25,6 +30,6 @@ cd yay
 makepkg -si
 
 echo "Install polybar"
-yay -S polybar
+yay --noconfirm -S polybar
 
 exit
