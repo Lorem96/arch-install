@@ -41,7 +41,10 @@ pacman --noconfirm -S lightdm lightdm-gtk-greeter
 systemctl enable lightdm
 
 echo "Install software"
-pacman -S chromium p7zip p7zip-plugins unrar tar rsync
+pacman --noconfirm -S chromium p7zip p7zip-plugins unrar tar rsync
+
+echo "Install codecs"
+pacman --noconfirm -S exfat-utils fuse-exfat a52dec faac faad2 flac jasper lame libdca libdv gst-libav libmad libmpeg2 libtheora libvorbis libxv wavpack x264 xvidcore gstreamer0.10-plugins flashplugin libdvdcss libdvdread libdvdnav gecko-mediaplayer dvd+rw-tools dvdauthor dvgrab
 
 echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
 
